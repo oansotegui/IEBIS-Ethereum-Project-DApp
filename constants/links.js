@@ -1,0 +1,1 @@
+export const BASE = process.env.NEXT_PUBLIC_NETWORK === 1 ? "https://etherscan.io/tx/" : "https://sepolia.etherscan.io/tx/"

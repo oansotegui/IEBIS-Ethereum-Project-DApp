@@ -1,0 +1,199 @@
+[
+  { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "actorAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "actorType",
+        "type": "uint256"
+      }
+    ],
+    "name": "ActorRegistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "medicationID",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "registeredBy",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "detailsHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "MedicationRegistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "string",
+        "name": "medicationID",
+        "type": "string"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "fromAddress",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "toAddress",
+        "type": "address"
+      }
+    ],
+    "name": "MedicationTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "string",
+        "name": "medicationID",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "validator",
+        "type": "address"
+      }
+    ],
+    "name": "MedicationValidated",
+    "type": "event"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "actors",
+    "outputs": [
+      { "internalType": "string", "name": "name", "type": "string" },
+      { "internalType": "uint256", "name": "actorType", "type": "uint256" },
+      { "internalType": "bool", "name": "isRegistered", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "newOwner", "type": "address" }
+    ],
+    "name": "changeOwner",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "string", "name": "", "type": "string" }],
+    "name": "medications",
+    "outputs": [
+      { "internalType": "string", "name": "medicationID", "type": "string" },
+      { "internalType": "address", "name": "registeredBy", "type": "address" },
+      { "internalType": "address", "name": "currentHolder", "type": "address" },
+      { "internalType": "bytes32", "name": "detailsHash", "type": "bytes32" },
+      { "internalType": "bool", "name": "isValidated", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_actorAddress", "type": "address" },
+      { "internalType": "string", "name": "_name", "type": "string" },
+      { "internalType": "uint256", "name": "_actorType", "type": "uint256" }
+    ],
+    "name": "registerActor",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_medicationID", "type": "string" },
+      { "internalType": "bytes32", "name": "_detailsHash", "type": "bytes32" }
+    ],
+    "name": "registerMedication",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_medicationID", "type": "string" }
+    ],
+    "name": "sellMedication",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_medicationID", "type": "string" },
+      { "internalType": "address", "name": "_toAddress", "type": "address" }
+    ],
+    "name": "transferMedication",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_medicationID", "type": "string" }
+    ],
+    "name": "validateMedication",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_medicationID", "type": "string" }
+    ],
+    "name": "verifyMedication",
+    "outputs": [
+      { "internalType": "address", "name": "registeredBy", "type": "address" },
+      { "internalType": "bytes32", "name": "detailsHash", "type": "bytes32" },
+      { "internalType": "bool", "name": "isValidated", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
