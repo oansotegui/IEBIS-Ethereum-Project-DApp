@@ -8,7 +8,7 @@ export const TopMenu = ({ isAdmin, isActor }) => {
     <>
       <Box bg={useColorModeValue("gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Image src="/logo.png" alt="logo" />
+          <Box>MedProof: Drug Traceability</Box>
           <Flex gap="5" w={"50%"} justify="space-around">
             <Link href="/">Inicio</Link>
             <Link href="/owner">Entidad Reguladora</Link>
