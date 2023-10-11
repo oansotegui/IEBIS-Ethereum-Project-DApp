@@ -11,8 +11,8 @@ export const TopMenu = ({ isAdmin, isActor }) => {
           <Box>Logo</Box>
           <Flex gap="5" w={"50%"} justify="space-around">
             <Link href="/">Inicio</Link>
-            <Link href="/owner">Owner</Link>
-            <Link href="/actor">Actor</Link>
+            <Link href="/owner">Entidad Reguladora</Link>
+            <Link href="/actor">Actores Registrados</Link>
           </Flex>
           <Flex alignItems={"center"}>
             <w3m-button />
