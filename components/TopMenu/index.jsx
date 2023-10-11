@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, useColorModeValue, Image } from "@chakra-ui/react"
 import Link from "next/link"
 
 export const TopMenu = ({ isAdmin, isActor }) => {
@@ -8,7 +8,7 @@ export const TopMenu = ({ isAdmin, isActor }) => {
     <>
       <Box bg={useColorModeValue("gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>Logo</Box>
+          <Image src="../logo.png" alt="logo medproof" />
           <Flex gap="5" w={"50%"} justify="space-around">
             <Link href="/">Inicio</Link>
             <Link href="/owner">Entidad Reguladora</Link>
