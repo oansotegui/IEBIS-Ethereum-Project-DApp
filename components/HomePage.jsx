@@ -101,8 +101,12 @@ export const HomePage = () => {
           ): ( 
             <Flex justify={"center"} flexDirection={"column"} alignItems={"center"}>
               <Box bg="gray.700" p="4" rounded="md" mb="4">
-                <Text color="white">
+                <Text color="white" textAlign="center">
                   Bienvenido a MedProof. Conecta tu Wallet y empieza a verificar la trazabilidad de tus medicamentos!
+                </Text>
+              </Box>
+              <Box bg="gray.700" p="4" rounded="md" mb="4">
+                <Text color="white" textAlign="center">
                   Si eres la Entidad Reguladora o un Actor Registrado, gracias por contribuir a mejorar la salud global de los ciudadanos!
                 </Text>
               </Box>
