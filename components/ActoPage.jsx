@@ -105,7 +105,7 @@ export const ActorPage = () => {
             </>
           ):
           currentAddr ? (
-            <Heading textAlign="center" textTransform="uppercase">No estas registrado</Heading>
+            <Heading textAlign="center" textTransform="uppercase">Solo los Actores Registrados pueden acceder a esta sección</Heading>
           ):
           <Flex justify={"center"}>
             <w3m-button />

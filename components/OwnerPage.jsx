@@ -107,7 +107,7 @@ export const OwnerPage = () => {
                 </>
               ) :
               currentAddr ? (
-                <Heading textAlign="center" textTransform="uppercase">No eres el owner</Heading>
+                <Heading textAlign="center" textTransform="uppercase">Solo la Entidad Reguladora puede acceder a esta sección</Heading>
               ):
               <Flex justify={"center"}>
                 <w3m-button />

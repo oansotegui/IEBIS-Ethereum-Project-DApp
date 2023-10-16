@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import { FormRegisterActor } from "@/components/FormRegisterActor"
 import { TopMenu } from "./TopMenu"
-import { Box, Button, Flex, Heading } from "@chakra-ui/react"
+import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react"
 import { createWeb3Modal, defaultWagmiConfig } from "@web3modal/wagmi/react"
 
 import { WagmiConfig } from "wagmi"
@@ -100,6 +100,11 @@ export const HomePage = () => {
             <FormVerifyMeds />
           ): ( 
             <Flex justify={"center"}>
+              <Box bg="gray.700" p="4" rounded="md" mb="4">
+                <Text color="white">
+                  Aquí puedes encontrar una breve explicación sobre el funcionamiento de esta dapp...
+                </Text>
+              </Box>
               <w3m-button />
             </Flex>
           )
