@@ -99,10 +99,11 @@ export const HomePage = () => {
           {address || currentAddr ? (
             <FormVerifyMeds />
           ): ( 
-            <Flex justify={"center"}>
+            <Flex justify={"center"} flexDirection={"column"} alignItems={"center"}>
               <Box bg="gray.700" p="4" rounded="md" mb="4">
                 <Text color="white">
-                  Aquí puedes encontrar una breve explicación sobre el funcionamiento de esta dapp...
+                  Bienvenido a MedProof. Conecta tu Wallet y empieza a verificar la trazabilidad de tus medicamentos!
+                  Si eres la Entidad Reguladora o un Actor Registrado, gracias por contribuir a mejorar la salud global de los ciudadanos!
                 </Text>
               </Box>
               <w3m-button />
